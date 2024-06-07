@@ -343,12 +343,9 @@ export default function Header() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link to="#">
-                  <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
+                  <span className="font-poppins font-bold text-2xl">
+                    Stitch
+                  </span>
                 </Link>
               </div>
 
