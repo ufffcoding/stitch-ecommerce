@@ -40,12 +40,11 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-
+  const searchParams = new URLSearchParams(location.search);
   const navigate = useNavigate();
 
   const handleFilter = (value, sectionId) => {
     // Create a URLSearchParams object from the current URL's search parameters
-    const searchParams = new URLSearchParams(location.search);
 
     // Retrieve the existing filter values for the section
     let filterValue = searchParams.getAll(sectionId);
@@ -77,8 +76,6 @@ export default function Example() {
   };
 
   const handleRadioFilter = (value, sectionId) => {
-    const searchParams = new URLSearchParams(location.search);
-
     // Clear existing filter for the section
     searchParams.delete(sectionId);
 
